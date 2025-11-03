@@ -1,0 +1,33 @@
+create database Zoologico; use Zoologico;
+
+Create Table Especie (
+   id_Especie Int auto_increment Primary Key , 
+  nome_comum varchar(30),
+  nome_cientifico varchar (100),
+  status_conservacao bool,
+  tipo_dieta varchar (50),
+  regiao_nativa varchar(30),
+	observacoes varchar (40)
+);
+
+Insert Into Especie(nome_comum, nome_cientifico, status_conservacao, tipo_dieta, regiao_nativa, observacoes)
+values('Tubarao_branco', 'Carcharodon carcharias', TRUE, 'Carnivoro', 'Oceano', 'saudavel'), ('Arara-azul', 'Anodorhynchus hyacinthinus', FALSE, 'Herbívoro', 'Floresta Amazônica', 'Em recuperação'),
+('Leão', 'Panthera leo', TRUE, 'Carnívoro', 'Savanas Africanas', 'Saudavel');
+
+Create Table Recinto_Animal  (
+   id_recinto int auto_increment Primary Key , 
+   nome varchar (50),
+   tipo_habitat varchar (80),
+   tipo varchar (50),
+   capacidade int,
+   observacoes varchar (40)
+);
+INSERT INTO Recinto_Animal (nome, tipo_habitat, tipo, capacidade, observacoes)
+VALUES
+('Aquário Oceânico', 'Marinho', 'Água salgada', 5, 'SAUDAVEL'),
+('Viveiro da Floresta', 'Aviário', 'Arvores', 10, 'RECUPERACAO'),
+('Savanas Africanas', 'Terrestre', 'Savanas', 8, 'SAUDAVEL');
+
+
+select*from Especie;
+select*from Recinto_Animal;
